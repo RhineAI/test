@@ -2,6 +2,7 @@
 
 @section('container')
 
+<h1>Kamu Boong</h1>
 
 
 

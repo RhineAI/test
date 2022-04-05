@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\SatuanController;
+use App\Http\Controllers\DataController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/dashboard/dashboard', [
+    return view('/layouts/dashboard', [
     "title" => "Home"   
     ]);
 });
+
+Route::get('/produk-kategori', [KategoriController::class, 'index']);
+Route::get('/produk', [SatuanController::class, 'index']);
+Route::get('/produk', [DataController::class, 'index']);
